@@ -5,22 +5,22 @@ const modalDesc = document.getElementById('modal-desc');
 const modalPrice = document.querySelector('.modal-price');
 const modalOrder = document.getElementById('modal-order');
 const closeBtn = document.querySelector('.close-btn');
-const phone = "213XXXXXXXXX"; // عدله برقمك
+const phone = "213XXXXXXXXX"; // ضع رقمك هنا
 
-// فتح المودال
+// فتح المودال باستخدام صورة المنتج الموجودة داخل العنصر
 function openModal(product) {
   const name = product.getAttribute('data-name');
   const price = product.getAttribute('data-price');
   const desc = product.getAttribute('data-desc');
-  const img = product.getAttribute('data-img');
+  const imgElement = product.querySelector('img'); // أخذ صورة المنتج من داخل الكرت
 
   modalName.textContent = name;
   modalDesc.textContent = desc;
   modalPrice.textContent = price;
-  modalImg.src = img;
+  modalImg.src = imgElement.src; // استخدم src الموجود فعليًا
   modalImg.alt = name;
 
-  modalOrder.href = `https://wa.me/${phone}?text=السلام عليكم، أريد طلب ${encodeURIComponent(name)} من The Qamis.`;
+  modalOrder.href = `https://wa.me/${phone}?text=${encodeURIComponent(`السلام عليكم، أريد طلب ${name} من The Qamis.`)}`;
   modal.classList.remove('hidden');
 }
 
@@ -40,3 +40,4 @@ modal.addEventListener('click', (e) => {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') modal.classList.add('hidden');
 });
+
