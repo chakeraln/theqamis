@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Qamis - منتجات العناية باللحية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo-wrapper">
+      <img src="./WhatsApp Image 2025-05-28 at 11.20.12_ba2a29d9.jpg" alt="شعار The Qamis" class="logo-img" />
+    </div>
+    <div>
+      <h1 class="logo-text">The Qamis</h1>
+      <p class="tagline">أناقة الرجل المسلم</p>
+    </div>
+  </div>
+</header>
+
+
+<main>
+  <section class="products-section container">
+    <h2 class="section-title">منتجات العناية باللحية</h2>
+    <div class="products-grid">
+      <!-- كل منتج -->
+      <article class="product-card" data-name="زيت اللحية" data-price="2500 دج" data-desc="زيت طبيعي لترطيب وتغذية اللحية مع رائحة مميزة." data-img="images/beard-oil.jpg">
+        <img src="./image.jpg" alt="زيت اللحية" class="product-img" />
+        <h3 class="product-name">زيت اللحية</h3>
+        <button class="btn-details">عرض التفاصيل</button>
+      </article>
+
+      <article class="product-card" data-name="شامبو اللحية" data-price="2200 دج" data-desc="شامبو خاص ينظف اللحية بلطف ويحافظ على نضارتها." data-img="images/beard-shampoo.jpg">
+        <img src="./image.jpg" alt="شامبو اللحية" class="product-img" />
+        <h3 class="product-name">شامبو اللحية</h3>
+        <button class="btn-details">عرض التفاصيل</button>
+      </article>
+
+      <article class="product-card" data-name="مشط اللحية" data-price="1500 دج" data-desc="مشط خشبي فاخر يساعد على ترتيب اللحية بسهولة." data-img="images/beard-comb.jpg">
+        <img src="./image.jpg" alt="مشط اللحية" class="product-img" />
+        <h3 class="product-name">مشط اللحية</h3>
+        <button class="btn-details">عرض التفاصيل</button>
+      </article>
+
+      <article class="product-card" data-name="باقة العناية الكاملة" data-price="6000 دج" data-desc="تتضمن زيت، شامبو، مشط وفرشاة للحفاظ على لحيتك بأفضل حالة." data-img="images/beard-kit.jpg">
+        <img src="./image.jpg" alt="باقة العناية الكاملة" class="product-img" />
+        <h3 class="product-name">باقة العناية الكاملة</h3>
+        <button class="btn-details">عرض التفاصيل</button>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- المودال -->
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <button class="close-btn" aria-label="إغلاق">&times;</button>
+    <img id="modal-img" class="modal-img" alt="" />
+    <h3 id="modal-name"></h3>
+    <p id="modal-desc"></p>
+    <p class="modal-price"></p>
+    <a id="modal-order" href="#" target="_blank" class="btn-whatsapp">اطلب عبر واتساب</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 The Qamis - جميع الحقوق محفوظة</p>
+    <p>تواصل معنا: <a href="https://wa.me/213XXXXXXXXX" target="_blank" class="whatsapp-link">واتساب</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
